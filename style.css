@@ -1,0 +1,154 @@
+/* Set full black background for retro arcade look (black) */
+body {
+  background-color: #000;
+}
+
+/* Container holding all Pac-Man elements */
+.main-div {
+  height: 50%;
+  width: 50%;
+  background-color: black;
+  position: relative;
+  top: 250px;
+  left: 100px;
+  margin: auto;
+}
+
+/* Top half of Pac-Man's mouth with rotation animation */
+.div1 {
+  width: 200px;
+  height: 100px;
+  animation-name: pacmanupper;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform: rotate(-10deg);
+  border-radius: 100px 100px 0 0;
+  background-color: #ffe600; /* Classic Pac-Man Yellow */
+  border: 1px solid #ffe600;
+}
+
+/* Bottom half of Pac-Man's mouth with rotation animation */
+.div2 {
+  width: 200px;
+  height: 100px;
+  transform: rotate(20deg);
+  border-radius: 0 0 100px 100px;
+  background-color: #ffe600;
+  border: 1px solid #ffe600;
+  animation-name: pacmanlower;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Keyframe for opening and closing upper jaw of Pac-Man */
+@keyframes pacmanupper {
+  from {
+    transform: rotate(-18deg);
+  }
+  to {
+    transform: rotate(-5deg);
+  }
+}
+
+/* Keyframe for opening and closing lower jaw of Pac-Man */
+@keyframes pacmanlower {
+  from {
+    transform: rotate(18deg);
+  }
+  to {
+    transform: rotate(5deg);
+  }
+}
+
+/* Small blinking eye on Pac-Man's head */
+.eye {
+  border-radius: 100%;
+  width: 5px;
+  height: 5px;
+  background-color: black;
+  border: 1px solid black;
+  padding: 5px;
+  animation-name: eye;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  position: relative;
+  top: -160px;
+  left: 130px;
+}
+
+/* Eye animation: blink between black and blue */
+@keyframes eye {
+  from {
+    background-color: black;
+    border: 1px solid black;
+  }
+  to {
+    background-color: #00f; /* Electric blue */
+    border: 1px solid #00f;
+  }
+}
+
+/* Rainbow-colored path to simulate Pac-Man's track */
+.pointsplatform {
+  width: 350px;
+  height: 5px;
+  position: relative;
+  top: -125px;
+  left: 80px;
+  background-image: linear-gradient(
+    to right,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
+}
+
+/* Animated point (food/squared-dot) that moves towards Pac-Man */
+.points {
+  border-radius: 6px;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border: 1px solid black;
+  padding: 5px;
+  animation-name: points;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  top: -125px;
+  left: 20px;
+  position: relative;
+}
+
+/* Static dot for decoration or food particle */
+.points2 {
+  padding: 5px;
+  border-radius: 6px;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border: 1px solid black;
+  position: relative;
+  top: -140px;
+  left: 570px;
+}
+
+/* Animation that moves dot from right to Pac-Man */
+@keyframes points {
+  0% {
+    background-color: #fff;
+    top: -125px;
+    left: 550px;
+  }
+  100% {
+    top: -125px;
+    left: 175px;
+  }
+}
