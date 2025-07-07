@@ -33,6 +33,8 @@ Features smooth mouth movement, blinking eye, and animated dots traveling on a v
 
 🔗 **View it on GitHub Pages:**
 
+[https://gauravjlad.github.io/Retro-Pacman](https://gauravjlad.github.io/Retro-Pacman)
+
 ---
 
 ## 📧 Connect with Me 🟡
